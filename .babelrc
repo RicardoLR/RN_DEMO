@@ -1,0 +1,24 @@
+{
+  "presets": ["babel-preset-expo", "react-native-dotenv"],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "cwd": "babelrc",
+      "root": ["./app"],
+      "src": [
+        "./node_modules"
+      ],
+      "extensions": [".js", ".ios.js", ".android.js"],
+      "alias": {
+        "Containers": "./app/Containers",
+        "Components": "./app/Components",
+        "Routes": "./app/Routes",
+        "Store": "./app/Store"
+      }    
+    }]
+  ]
+}
